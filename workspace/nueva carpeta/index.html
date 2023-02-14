@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>
+        HTML, CSS Y JS
+    </title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">ADSO 3</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="Tablas.html">Tablas</a>
+              </li>
+              
+            </ul>
+          
+      </nav>
+    </div>
+    <h1>calculadora</h1>
+<P>1#
+
+<input type="text" class="border border-primary" id="n1" placeholder="Inserte un Numero">
+<br><br/></P>
+<P>2#
+<input type="text" class="border border-danger" id="n2" placeholder="Inserte otro Numero">
+<br><br/></P>
+
+
+
+<button class="btn btn-primary" id="suma">+</button>
+<button class="btn btn-danger" id="resta">-</button>
+<button class="btn btn-warning" id="multiplicacion">*</button>
+<button class="btn btn-success" id="division">/</button>
+<button class="btn btn-info" id="calcular">Calcular</button>
+<br><br/> 
+
+<output id="r"></output> 
+<br><br/> 
+<script>
+let op;
+
+
+document.querySelector('#suma').addEventListener('click', () =>{
+  op = '+';
+});
+document.querySelector('#resta').addEventListener('click', () =>{
+  op = '-';
+});
+document.querySelector('#multiplicacion').addEventListener('click', () =>{
+  op = '*';
+});
+document.querySelector('#division').addEventListener('click', () =>{
+  op = '/';
+});
+
+document.querySelector('#calcular').addEventListener('click', () =>{
+  const n1 = parseInt(document.querySelector('#n1').value);
+  const n2 = parseInt(document.querySelector('#n2').value);
+  let r;
+  if(op == '+'){
+      r = n1 + n2;
+  }else if( op == '-'){
+      r = n1 - n2;
+  }else if(op == '*'){
+      r = n1 * n2;
+  }else if(op == '/'){
+      r = n1 / n2;
+  }
+  document.querySelector('#r').innerHTML = r;
+});
+
+</script>
+  </div>
+    <a href="#" class="btn btn-primary" onclick="saludar(' luis')"> no me oprimas</a>
+    <p id="waza">
+    </p>
+
+
+    <h1 id="uno">5</h1>
+
+    <h1 id="dos">7</h1>
+
+
+    <b href="#" class="btn btn-primary" onclick="sumar()"> calcular</b>
+    <p id="calcular"></p>
+
+    <script>
+        function sumar(suma) {
+            const uno = document.getElementById('uno');
+            const dos = document.getElementById('dos');
+            const calcular = document.getElementById('calcular');
+
+            let x, y, resultado;
+            x = uno.innerHTML
+            y = dos.innerHTML
+
+            result = x + y;
+
+            calcular.innerHTML = "el resultado de la operacion es " + result;
+
+        }
+
+    </script>
+
+
+    <script async src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js"
+        crossorigin="anonymous"></script>
+    <script type="importmap">
+
+    </script>
+    <!-- este es un comentario de HTML-->
+    <script>
+        //este es un comentario de js
+
+
+        function saludar(nombre) {
+            //alert("Hola Mundo" + nombre ) 
+            const waza = document.getElementById("waza");
+            waza.innerHTML = "Hola mundo" + nombre
+            console.log('este es un dato desde vim' + waza.innerHTML)
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
