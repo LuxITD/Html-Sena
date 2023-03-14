@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>
+        HTML, CSS Y JS
+    </title>
+</head>
+
+<body>
+    <h1>Hello, modularity!</h1>
+    <a href="#" class="btn btn-primary" onclick="saludar(' luis')"> no me oprimas</a>
+    <p id="waza">
+    </p>
+
+
+    <h1 id="uno">5</h1>
+
+    <h1 id="dos">7</h1>
+
+
+    <b href="#" class="btn btn-primary" onclick="sumar()"> calcular</b>
+    <p id="calcular"></p>
+
+    <script>
+        function sumar(suma) {
+            const uno = document.getElementById('uno');
+            const dos = document.getElementById('dos');
+            const calcular = document.getElementById('calcular');
+
+            let x, y, resultado;
+            x = uno.innerHTML
+            y = dos.innerHTML
+
+            resultado = x + "" +  +  + y;
+
+            calcular.innerHTML = "el resultado de la operacion es " + resultado;
+
+        }
+
+    </script>
+
+
+    <script async src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js"
+        crossorigin="anonymous"></script>
+    <script type="importmap">
+
+    </script>
+    <!-- este es un comentario de HTML-->
+    <script>
+        //este es un comentario de js
+
+
+        function saludar(nombre) {
+            //alert("Hola Mundo" + nombre ) 
+            const waza = document.getElementById("waza");
+            waza.innerHTML = "Hola mundo" + nombre
+            console.log('este es un dato desde vim' + waza.innerHTML)
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
